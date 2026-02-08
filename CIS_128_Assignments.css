@@ -24,9 +24,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Homework 1 styling */
 
-#about-me.hw1 {
+#pic-with-text.hw1 {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
 }
 
@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100px;
     height: auto;
     border-radius: 15px;
+    margin-top: 10px;
 }
 
 /* Homework 1a styling */

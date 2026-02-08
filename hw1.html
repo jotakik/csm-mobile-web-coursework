@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=
-        "This is where the assignments from the Mobile Web App Development course \
+    <meta name="description" content="This is where the assignments from the Mobile Web App Development course \
         at College of San Mateo will be displayed.">
 
     <title>CIS 128 Assignments</title>
@@ -18,8 +18,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         function changeFont($element) {
-            $element.animate({"font-size": "+=1rem"}, 1000, () => {$element.css("color", "midnightblue")});
-            $element.animate({"font-size": "-=1rem"}, 1000, () => {$element.css("color", "black")});
+            $element.animate({ "font-size": "+=1rem" }, 1000, () => { $element.css("color", "midnightblue") });
+            $element.animate({ "font-size": "-=1rem" }, 1000, () => { $element.css("color", "black") });
         }
 
         function addBorder($element) {
@@ -34,6 +34,7 @@
         });
     </script>
 </head>
+
 <body>
     <header>
         <h1 id="top-heading">CIS 128 Assignments</h1>
@@ -42,22 +43,27 @@
     <main>
         <button type="button" id="animate-button" class="hw1a">Start animation</button>
 
-        <section class="hw1" id="about-me">
+        <div class="hw1" id="pic-with-text">
             <img src="profilepic.png" alt="Joshua Tan standing up and looking at his smartphone." id="profile-pic">
-            <p>
-                Hello, I am Joshua. My studies are primarily in Computer Science,
-                and I am continuing to enhance my CS knowledge through classes at
-                the College of San Mateo. In my spare time, I rock climb (both
-                bouldering and top rope), garden, and do house repairs.
-                A quote that inspires me is one that I heard in the Hobbit films, when
-                the dwarf Balin describes his loyalty to the leader, Thorin. He explains
-                to Bilbo that after seeing Thorin rise up and fight when all seemed lost,
-                he thought to himself: "There is one I could follow, one I could call King."
-                I hope to find people like that in my life, and be someone like that to others.
-            </p>
-        </section>
+
+            <section id="about-me">
+                <h2>About me</h2>
+                <p>
+                    Hello, I am Joshua. My studies are primarily in Computer Science,
+                    and I am continuing to enhance my CS knowledge through classes at
+                    the College of San Mateo. In my spare time, I rock climb (both
+                    bouldering and top rope), garden, and do house repairs.
+                    A quote that inspires me is one that I heard in the Hobbit films, when
+                    the dwarf Balin describes his loyalty to the leader, Thorin. He explains
+                    to Bilbo that after seeing Thorin rise up and fight when all seemed lost,
+                    he thought to himself: "There is one I could follow, one I could call King."
+                    I hope to find people like that in my life, and be someone like that to others.
+                </p>
+            </section>
+        </div>
 
         <section id="course-motivation">
+            <h2>Course motivation</h2>
             <p>
                 Last semester, I took courses on JavaScript/AJAX, Swift/iOS programming,
                 and Databases at CSM. This semester, I am taking the Mobile Web App
@@ -78,14 +84,14 @@
                 <li>JavaScript</li>
             </ul>
         </section>
-        
+
         <section id="resources">
             <h2>Resources</h2>
             <ul>
                 <li>
                     <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">
                         MDN Web Docs
-                    </a> 
+                    </a>
                     is an open-source documentation repository for web developers,
                     maintained by Mozilla and the developer community. It provides
                     documentation on HTML, CSS, and JavaScript.
@@ -93,7 +99,7 @@
                 <li>
                     <a href="https://www.theodinproject.com" target="_blank" rel="noopener noreferrer">
                         The Odin Project
-                    </a> 
+                    </a>
                     has open-source curriculum that focuses less on terminology and
                     syntax, but instead describes how functions and features should
                     be used at a higher level.
@@ -102,4 +108,5 @@
         </section>
     </main>
 </body>
+
 </html>
