@@ -14,13 +14,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="CIS_128_Assignments.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function changeFont($element) {
+            $element.animate({"font-size": "+=1rem"}, 1000, () => {$element.css("color", "midnightblue")});
+            $element.animate({"font-size": "-=1rem"}, 1000, () => {$element.css("color", "black")});
+        }
+
+        function addBorder($element) {
+            $element.css("border", "5px inset beige");
+        }
+
+        $(document).ready(() => {
+            $("#animate-button").click(() => {
+                addBorder($("#profile-pic"));
+                changeFont($("#top-heading"));
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
-        <h1>CIS 128 Assignments</h1>
+        <h1 id="top-heading">CIS 128 Assignments</h1>
     </header>
 
     <main>
+        <button type="button" id="animate-button" class="hw1a">Start animation</button>
+
         <section class="hw1" id="about-me">
             <img src="profilepic.png" alt="Joshua Tan standing up and looking at his smartphone." id="profile-pic">
             <p>
