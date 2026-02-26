@@ -1,0 +1,187 @@
+/* --------------------------------------- */
+/* Universal for all browsing environments */
+/* --------------------------------------- */
+
+/* --------- Reset --------- */
+body, h1, h2, h3, p, img, ul, li {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html { font-size: 87.5%; }
+
+body {
+    background: #eaf8fb;	/* a light blue background color. */
+    font-family: Arial, Helvetica, sans-serif; /* the font family for all text on the web page is now either arial, helvetica or a sans-serif font if those two are not available */
+}
+
+p {
+    letter-spacing: 0.04em; /* letter spacing sets the horizontal spacing (kerning) between letters in a block of text. */
+    line-height: 1.3; /* line height sets the vertical spacing between lines of text. */
+    margin-bottom: 0.5rem;
+}
+
+h1, h2, h3 {
+    line-height: 1.15;
+    margin: 1rem 0;
+}
+
+.page { 
+    /* max-width: 56.25rem; */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+
+/* --------- Component styling --------- */
+.header {
+    background-color: #333; /* a more specific way to set a background color */
+    background-image: url(images/headerbkgd.png); /* sets a background image in the header and the position it should sit */
+    /* background-size: cover; */
+    background-repeat: no-repeat; /* sets a background image to repeat, repeat-x, repeat-y or not at all as written in this rule */
+    background-position: left bottom;/* sets a background image position */
+    color: #fff;	/* sets the the color of all header text to white */
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;	/* make rounded corners for the bottom */
+    padding: 2rem 1rem 1rem;
+    min-height: 10rem;
+}
+
+.header h1, .header h2 {
+    margin: 0;
+}
+
+.nav-list {
+    list-style: none;	/* this removes the bullets from list elements */
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.25rem;	/* giving the ul a top margin of 20px */
+}
+
+.nav-list li a {
+    display: inline-block; /* an inline block element can have width and height applied to it / and if not, they only take up as much space as the content within allows */
+    padding: 0.25rem 0.75rem;	/* as the name implies, this adds extra padding around the link, so that the borders don't bump up against the link text */
+    background: #4a4a4a;	/* this is a dark grey background for the link */
+    color:#fff;	/* this makes the link text white */
+    border-radius: 2px;	/* make rounded corners */
+    border: 1px solid #595959; /* this adds a light grey solid border of 1px width around the link */
+    text-decoration: none; /* this removes the normal underline that links usually have */
+}
+
+.nav-list li a:hover {
+    background-color: #000; /*this is a hover pseudo class.  By designating a different background color, than the class for the a tag above, when a mouse hovers over these particular links, in the navigation bar, the background color will change to what's defined here */ 
+}
+
+.related-info a {
+    color: #445e64;	/* this redefines all links in the left sidebar to this new color, as opposed to the default blue link color */
+}
+
+.related-info a:hover {
+    text-decoration: none
+}	/* when hovering over a link, in the sidebar, this turns off the underline */
+
+.links {
+    border-top: 1px solid #c3dce1;
+    border-bottom: 1px solid #c3dce1; /* adds a border to the bottom of the list to further divide the content for easier segregation */
+    padding-bottom: 1rem;
+}
+
+.links ul { padding-left: 1.25rem; }
+
+.links li { margin-bottom: 0.5rem;}
+
+.links li a {
+    font-weight: bold;	/* this makes all anchor classes with .list bold without using <strong>  */
+    text-transform: uppercase;	/* this makes all anchor classes with .list uppercase  */
+}
+
+.footer {
+    background-color: #c4d5d9;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer p { margin-bottom: 0; }
+
+.fact-block img {
+    /* max-width: 200px; */
+    
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+.clear { clear: both; }
+	
+
+
+/* ------------------------------ */
+/* Browsing environment dependent */
+/* ------------------------------ */
+
+/* ----------------- Phones ----------------- */
+/* --------- Styling --------- */
+@media (min-width: 25em) { 
+    .fact-block img { max-width: 400px; } 
+}
+
+/* --------- Layouts --------- */
+.page {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+    gap: 1rem;
+}
+
+.header { grid-area: header; }
+
+.content {
+    grid-area: content;
+
+    display: grid;
+    grid-template-areas: 
+        "main-info"
+        "sidebar";
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.related-info { grid-area: sidebar; }
+
+.main-info { grid-area: main-info; }
+
+.footer { grid-area: footer; }
+
+
+/* ----------------- Tablets/Desktops ----------------- */
+@media (min-width: 48em) {
+    /* --------- Styling --------- */
+    .links { border-top: none; }
+
+    .fact-block img { 
+        margin: 0 1rem 1rem 0; 
+        max-width: 300px;
+    }
+
+    
+    /* --------- Layouts --------- */
+    .content {
+        grid-template-columns: 12.5rem 1fr;
+        grid-template-areas: 
+            "sidebar main-info";
+        margin: 0 auto;
+    }
+
+    .fact-block img { float: left; }
+}
