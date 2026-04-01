@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ABC Toys with great toys for all age groups" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+
+    <title>ABC Toys</title>
+</head>
+
+<body class="font-sans bg-sky-50">
+    <nav class="fixed top-0 left-0 w-full z-50 shadow-md bg-teal-300 px-3 py-3">
+        <div class="bg-teal-100 max-w-10xl mx-auto px-4 py-3 flex items-center justify-between rounded-xl">
+            <a href="./index.html" class="text-3xl font-display font-bold">ABC Toys</a>
+
+            <div class="grid grid-cols-2 gap-3 md:flex md:gap-6">
+                <a href="./products.html" class="hover:text-blue-300">Products</a>
+                <a href="./location.html" class="hover:text-blue-300">Location</a>
+                <a href="./extra.html" class="hover:text-blue-300">Extra</a>
+                <a href="./contact-us.html" class="hover:text-blue-300">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <main class="text-center px-3 pt-32">
+        <h1 class="py-4 font-display text-2xl font-semibold">Three WURFL Capabilities</h1>
+
+        <dl class="py-3">
+            <div class="py-3">
+                <dt class="font-display text-lg font-semibold">
+                    brand_name
+                </dt>
+                <dd class="mt-2">
+                    Returns the brand of the device making the request, such as Apple,
+                    Samsung, or Nokia. A developer can test this capability to show
+                    device-specific messaging, group analytics by manufacturer, or debug
+                    issues that only appear on certain brands.
+                </dd>
+            </div>
+
+            <div class="py-3">
+                <dt class="font-display text-lg font-semibold">
+                    form_factor
+                </dt>
+                <dd class="mt-2">
+                    Returns the device category, such as Desktop, Tablet, Smartphone,
+                    Feature Phone, Smart-TV, or Robot. A developer can test this capability
+                    to decide whether to serve a mobile layout, a tablet-friendly layout,
+                    or a desktop experience.
+                </dd>
+            </div>
+
+                <div class="py-3">
+                <dt class="font-display text-lg font-semibold">
+                    resolution_width
+                </dt>
+                <dd class="mt-2">
+                    Returns the screen width in pixels. A developer can test this capability
+                    to choose image sizes, adjust layout breakpoints, or optimize media for
+                    smaller and larger screens.
+                </dd>
+            </div>
+        </dl>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ABC Toys with great toys for all age groups" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+
+    <title>ABC Toys</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const outputElement = document.getElementById("location-output");
+
+            function returnCoords(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                outputElement.textContent = `Your latitude is ${latitude} and your longitude is ${longitude}.`
+            }
+
+            function handleError(error) {
+                outputElement.textContent = "Unable to determine your location."
+            }
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(returnCoords, handleError);
+            }   
+            else {
+                output.textContent = "Geolocation is not supported by your browser."
+            }
+        })
+    </script>
+</head>
+
+<body class="font-sans bg-sky-50">
+    <nav class="fixed top-0 left-0 w-full z-50 shadow-md bg-teal-300 px-3 py-3">
+        <div class="bg-teal-100 max-w-10xl mx-auto px-4 py-3 flex items-center justify-between rounded-xl">
+            <a href="./index.html" class="text-3xl font-display font-bold">ABC Toys</a>
+
+            <div class="grid grid-cols-2 gap-3 md:flex md:gap-6">
+                <a href="./products.html" class="hover:text-blue-300">Products</a>
+                <a href="./location.html" class="hover:text-blue-300">Location</a>
+                <a href="./extra.html" class="hover:text-blue-300">Extra</a>
+                <a href="./contact-us.html" class="hover:text-blue-300">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <main class="text-center px-3 pt-32">
+        <h1 class="py-4 font-display text-2xl font-semibold">Your Location</h1>
+
+        <p id="location-output" class="py-3"></p>
+    </main>
+</body>
+
+</html>

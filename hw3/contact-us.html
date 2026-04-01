@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ABC Toys with great toys for all age groups" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+
+    <title>ABC Toys</title>
+</head>
+
+<body class="font-sans bg-sky-50">
+    <nav class="fixed top-0 left-0 w-full z-50 shadow-md bg-teal-300 px-3 py-3">
+        <div class="bg-teal-100 max-w-10xl mx-auto px-4 py-3 flex items-center justify-between rounded-xl">
+            <a href="./index.html" class="text-3xl font-display font-bold">ABC Toys</a>
+
+            <div class="grid grid-cols-2 gap-3 md:flex md:gap-6">
+                <a href="./products.html" class="hover:text-blue-300">Products</a>
+                <a href="./location.html" class="hover:text-blue-300">Location</a>
+                <a href="./extra.html" class="hover:text-blue-300">Extra</a>
+                <a href="./contact-us.html" class="hover:text-blue-300">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <main class="text-center px-3 pt-32">
+        <h1 class="py-4 font-display text-2xl font-semibold">Contact Us</h1>
+
+        <p class="py-3">
+            <span class="font-semibold">Email:</span>
+            <a 
+                href="mailto:hello@abctoys.com" class="
+                text-blue-600 underline hover:text-blue-800"
+            >
+                hello@abctoys.com
+            </a>
+        </p>
+
+        <p class="py-3">
+            <span class="font-semibold">Phone:</span>
+            <a 
+                href="tel:+16501234567"
+                class="text-blue-600 underline hover:text-blue-800"
+            >
+                (650) 123-4567
+            </a>
+        </p>
+        
+        <p class="py-3">
+            <span class="font-semibold">Address:</span>
+            <a 
+                href="https://maps.google.com/?q=123+Main+Street+Sacramento+CA+90001"
+                class="text-blue-600 underline hover:text-blue-800"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                123 Main Street, Sacramento, CA 90001
+            </a>
+        </p>
+
+        <p class="py-3">
+            <span class="font-semibold">Facebook:</span>
+            <a 
+                href="https://www.facebook.com"
+                class="text-blue-600 underline hover:text-blue-800"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                facebook.com
+            </a>
+        </p>
+    </main>
+
+    <form class="px-5 mt-6 space-y-3">
+        <div>
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full rounded-lg border border-gray-300 px-3 py-2"
+                placeholder="Your name"
+                required
+            />
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full rounded-lg border border-gray-300 px-3 py-2"
+                placeholder="email@yahoo.com"
+                required
+            />
+        </div>
+
+        <div>
+            <label for="comment">Comment</label>
+            <textarea
+                id="comment"
+                name="comment"
+                rows="5"
+                class="w-full rounded-lg border border-gray-300 px-3 py-2"
+                placeholder="Write your comment here"
+                required
+            ></textarea>
+        </div>
+
+        <button 
+            type="submit"
+            class="rounded-lg bg-teal-300 px-5 py-2 font-semibold"
+        >
+            Submit
+        </button>
+    </form>
+</body>
+
+</html>
