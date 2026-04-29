@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <title>Homework 4</title>
+
+    <link rel="stylesheet" href="../CIS_128_Assignments.css">
+    <link rel="stylesheet" href="rwd_style.css">
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js")
+                .then(() => {
+                    console.log("Service worker registered");
+                })
+                .catch((error) => {
+                    console.log("Service worker failed: ", error);
+                })
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const backgroundImg = document.getElementById("bg-img");
+            backgroundImg.addEventListener("change", (event) => {
+                document.body.style.backgroundImage = `url(images/${event.target.value}.jpg)`;
+            });
+        });
+    </script>
+</head>
+<body class="page">
+    <h1>Progressive Web Application (PWA)</h1>
+
+    <p>
+        A Progressive Web Application, or PWA, is a type of web app that feels more like a traditional mobile or desktop app. 
+        One of its main characteristics is that it works directly through a web browser, so users do not always need to download it from an app store. 
+        PWAs are also designed to be responsive, which means they adjust well to different screen sizes, such as phones, tablets, and computers. 
+        They are usually fast, easy to access, and can often be added to the home screen like a regular app.
+    </p>
+    <p>
+        Another important characteristic of a PWA is that it can work even with a weak internet connection, and sometimes even offline, by using stored data. 
+        PWAs can also send push notifications, load quickly, and update automatically when new content is available. 
+        They are built to be reliable, secure, and user-friendly, giving people a smooth experience similar to using a native app while still being available through the web.
+    </p>
+
+    <div>
+        <label for="bg-img">Background color</label>
+        <select name="bg-img" id="bg-img">
+            <option value="default" selected disabled>Default</option> 
+            <option value="lightblue">Light Blue</option>
+            <option value="lightgold">Light Gold</option>
+        </select>
+    </div>
+</body>
+</html>
