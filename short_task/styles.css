@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.site-header {
+    padding: 2rem 0;
+    background-color: #e8f0fe;
+}
+
+.section {
+    margin: 2rem 0;
+}
+
+.recommendation-section,
+.comparison-section,
+.summary-section,
+.references-section {
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.recommendation-section {
+    background-color: #e8f0fe;
+}
+
+.comparison-section {
+    background-color: #fef3c7;
+}
+
+.summary-section {
+    background-color: #dcfce7;
+}
+
+.references-section {
+    background-color: #f3e8ff;
+}
+
+.recommendation-card,
+.tech-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.cards,
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Larger screens */
+@media (min-width: 700px) {
+    .cards,
+    .summary-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

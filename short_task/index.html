@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a managerial report comparing Flutter, Ionic, and React Native for developing hybrid applications.">
+
+    <title>Short Task</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" 
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../CIS_128_Assignments.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("service-worker.js")
+                    .then(function () {
+                        console.log("Service worker registered.");
+                    })
+                    .catch(function (error) {
+                        console.log("Service worker registration failed:", error);
+                    });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Hybrid Application Technology Comparison</h1>
+            <p class="intro">
+                This report compares Flutter, Ionic, and React Native as possible technologies
+                for building cross-platform mobile applications.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section recommendation-section">
+            <h2 id="recommendation-heading">Recommendation</h2>
+
+            <div class="recommendation-card">
+                <h3>Recommended Choice: React Native</h3>
+
+                <p>
+                    For a company with web developers who already understand JavaScript, React,
+                    and component-based development, React Native is the strongest general choice.
+                    It allows the team to build mobile apps using React while still connecting to
+                    native platform features when needed.
+                </p>
+
+                <p>
+                    Flutter is also a strong option, especially when the company wants a highly
+                    custom interface and consistent design across platforms. However, it requires
+                    the team to learn Dart and the Flutter ecosystem.
+                </p>
+
+                <p>
+                    Ionic is the easiest option for teams that want to reuse existing web skills
+                    such as HTML, CSS, and JavaScript. However, it may be less ideal for apps that
+                    need a very native feel or heavy device-level performance.
+                </p>
+            </div>
+        </section>
+
+        <section class="section comparison-section">
+            <h2 id="comparison-heading">Comparison</h2>
+
+            <div class="cards">
+                <article class="tech-card">
+                    <h3>Flutter</h3>
+
+                    <p>
+                        Flutter is a UI toolkit used to build apps for mobile, web, desktop,
+                        and embedded devices from one codebase.
+                    </p>
+
+                    <h4>Best For</h4>
+                    <ul>
+                        <li>Highly visual apps</li>
+                        <li>Consistent design across platforms</li>
+                        <li>Teams willing to learn Dart</li>
+                    </ul>
+
+                    <h4>Manager Notes</h4>
+                    <p>
+                        Flutter can be a good long-term investment, but it may require more
+                        training if the team mostly knows JavaScript.
+                    </p>
+                </article>
+
+                <article class="tech-card featured-card">
+                    <h3>React Native</h3>
+
+                    <p>
+                        React Native lets developers use React concepts to build native mobile
+                        applications for iOS and Android.
+                    </p>
+
+                    <h4>Best For</h4>
+                    <ul>
+                        <li>Teams already familiar with React</li>
+                        <li>Apps that need a native mobile feel</li>
+                        <li>Projects that may need native platform APIs</li>
+                    </ul>
+
+                    <h4>Manager Notes</h4>
+                    <p>
+                        React Native gives the company a good balance between developer familiarity,
+                        native app capabilities, and cross-platform development.
+                    </p>
+                </article>
+
+                <article class="tech-card">
+                    <h3>Ionic</h3>
+
+                    <p>
+                        Ionic is a web-first mobile UI toolkit, commonly used with Capacitor to
+                        package web apps for iOS, Android, and Progressive Web Apps.
+                    </p>
+
+                    <h4>Best For</h4>
+                    <ul>
+                        <li>Teams with strong HTML, CSS, and JavaScript skills</li>
+                        <li>Simple business apps that do not need complex animations or intense device performance</li>
+                        <li>Apps that are mostly web-based but need to be packaged for app stores</li>
+                    </ul>
+
+                    <h4>Manager Notes</h4>
+                    <p>
+                        Ionic may be the fastest starting point for web developers, but it may not
+                        be the best choice for performance-heavy mobile apps.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section summary-section">
+            <h2 id="summary-heading">Decision Summary</h2>
+
+            <div class="summary-grid">
+                <div class="tech-card">
+                    <h3>Choose Flutter if...</h3>
+                    <p>
+                        The app needs a polished custom interface and the team is comfortable
+                        learning Dart.
+                    </p>
+                </div>
+
+                <div class="tech-card">
+                    <h3>Choose React Native if...</h3>
+                    <p>
+                        The team already knows React and wants a strong balance between native
+                        performance and cross-platform development.
+                    </p>
+                </div>
+
+                <div class="tech-card">
+                    <h3>Choose Ionic if...</h3>
+                    <p>
+                        The project is closer to a web app and the company wants to reuse existing
+                        HTML, CSS, and JavaScript knowledge.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section references-section">
+            <h2 id="references-heading">References</h2>
+
+            <ul class="references-list">
+                <li>
+                    <a href="https://flutter.dev/" target="_blank" rel="noopener">
+                        Flutter official overview
+                    </a>
+                    (https://flutter.dev/)
+                </li>
+                <li>
+                    <a href="https://reactnative.dev/" target="_blank" rel="noopener">
+                        React Native official documentation
+                    </a>
+                    (https://reactnative.dev/)
+                </li>
+                <li>
+                    <a href="https://ionicframework.com/docs" target="_blank" rel="noopener">
+                        Ionic Framework official documentation
+                    </a>
+                    (https://ionicframework.com/docs)
+                </li>
+                <li>
+                    <a href="https://capacitorjs.com/" target="_blank" rel="noopener">
+                        Capacitor official overview
+                    </a>
+                    (https://capacitorjs.com/)
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
